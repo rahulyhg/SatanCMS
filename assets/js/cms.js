@@ -31,6 +31,6 @@ function ajax(type, url, variables, callback){
     xhr.send(string_vars);
 }
 
-function message(arg){
+function message(arg){ // this will be a sexy message at the top of the screen
     var body = document.getElementById('body');
 }
