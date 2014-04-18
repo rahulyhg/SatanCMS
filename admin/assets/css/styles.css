@@ -116,6 +116,12 @@ ul li {
 	background-color: #d6d9dc;
 }
 
+.header-right {
+	position: absolute;
+	top: -38px;
+	right: 28px;
+	font-size: 28px;
+}
 
 /* Blogs */
 .blog-post {
@@ -129,7 +135,7 @@ ul li {
 .blog-post .options {
 	float: right;
 }
-.blog-post .options i {
+.blog-post .options a {
 	float: left;
 	margin: 0 0 0 10px;
 }
