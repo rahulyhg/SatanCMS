@@ -1,0 +1,158 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
+.fa.fa-times-circle {
+	color: #F00;
+}
+
+h1 {
+	font-size: 24px;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 12px;
+}
+h5 {
+	font-size: 10px;
+}
+h6 {
+	font-size: 8px;
+}
+
+
+input[type="text"],
+textarea {
+	padding: 5px 10px;
+	font-size: 18px;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+ul li {
+	list-style: disc inside;
+}
+
+#header {
+	text-align: center;
+	height: 55px;
+	line-height: 55px;
+	box-shadow: 0 1px 2px rgba(199,206,209,0.6);
+}
+#header a,
+#header a .fa {
+	line-height: 55px;
+	color: #000;
+}
+
+#body {
+	-webkit-transition: left 0.05s ease;
+	-moz-transition: left 0.05s ease;
+	-ms-transition: left 0.05s ease;
+	-o-transition: left 0.05s ease;
+	transition: left 0.05s ease;
+	position: absolute;
+	top: 55px;
+	bottom: 0;
+	left: 300px;
+	right: 0;
+	padding: 20px;
+}
+
+#navigation {
+	-webkit-transition: width 0.05s ease;
+	-moz-transition: width 0.05s ease;
+	-ms-transition: width 0.05s ease;
+	-o-transition: width 0.05s ease;
+	transition: width 0.05s ease;
+	position: absolute;
+	top: 56px;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	background-color: #f0f2f4;
+	overflow: hidden;
+	box-shadow: inset -1px 0 5px rgba(0,0,0,0.1);
+}
+#navigation ul li {
+	list-style: none;
+}
+#navigation.closed {
+	width: 0;
+}
+#navigation.closed + #body {
+	left: 0;
+}
+#navigation ul li {
+	padding: 20px;
+	position: relative;
+}
+#navigation ul li a {
+	color: #000;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 18px;
+	line-height: 40px;
+	padding-left: 20px;
+	font-family: "Helvetica", sans-serif;
+}
+#navigation ul li a .fa {
+	display: none;
+	float: right;
+	margin: 12px;
+}
+#navigation ul li:hover {
+	background-color: #d6d9dc;
+}
+
+
+/* Blogs */
+.blog-post {
+	box-shadow: 0 1px 2px rgba(199,206,209,0.6);
+	padding: 10px;
+}
+.blog-post .title {
+	font-size: 20px;
+	float: left;
+}
+.blog-post .options {
+	float: right;
+}
+.blog-post .options i {
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+/* Blog edit */
+#edit-blog-post input[type="text"] {
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+#edit-blog-post #markdown,
+#edit-blog-post #preview {
+	width: 47%;
+	box-sizing: border-box;
+	min-height: 100px;
+}
+#edit-blog-post #markdown {
+	float: left;
+	max-width: 47%;
+	min-width: 47%;
+}
+#edit-blog-post #preview {
+	float: right;
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 5px 10px;
+}
