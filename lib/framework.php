@@ -13,4 +13,12 @@ include_once "classes/Cms.php";
 include_once "config.php";
 include_once "{$CMS->SITE['DIR']}lib/functions.php";
 
+// markdown
+require "{$CMS->SITE['DIR']}lib/Michelf/MarkdownInterface.php";
+require "{$CMS->SITE['DIR']}lib/Michelf/Markdown.php";
+
+use \Michelf\Markdown;
+
+$markdown = new Markdown();
+
 ?>

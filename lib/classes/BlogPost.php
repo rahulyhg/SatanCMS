@@ -12,6 +12,13 @@ class BlogPost extends Base {
 		}
 	}
 
+	function md($html){
+		global $CMS,
+			$markdown;
+		$html = $markdown->defaultTransform($html);
+		return $html;
+	}
+
 	function __destruct(){
 		return true;
 	}
