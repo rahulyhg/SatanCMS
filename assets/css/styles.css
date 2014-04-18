@@ -32,7 +32,9 @@ h6 {
 
 .blog-post {
 	max-width: 800px;
-	margin: 0 auto;
+	margin: 0 auto 20px auto;
+	padding: 0 10px 20px 10px;
+	border-bottom: 1px solid #EEE;
 }
 .blog-post h3 {
 	font-size: 20px;
