@@ -9,7 +9,7 @@ $response = array();
 
 // save
 if($id){ // update
-	$mysqli->query("UPDATE blog_posts SET title = '{$title}', content = '{$content}', datestamp = {$time} WHERE id = {$id}");
+	$mysqli->query("UPDATE blog_posts SET title = '{$title}', content = '{$content}' WHERE id = {$id}");
 	$response['type'] = 'update';
 }else{ // insert
 	$mysqli->query("INSERT INTO blog_posts (`title`,`content`,`published`,`datestamp`) VALUES ('{$title}','{$content}',1,{$time})");

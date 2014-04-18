@@ -6,6 +6,8 @@ if(isset($_GET['id'])){
 }
 echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php"); ?>
 
+<a href="javascript:void(0);" onclick="cancelPost()" class="header-right"><i class="fa fa-arrow-circle-left"></i></a>
+
 <div id="edit-blog-post">
 	<input type="text" id="title" placeholder="Title" value="<?=(isset($blogPost))?$blogPost->title:'';?>" />
 	<div class="clear"></div>
@@ -40,6 +42,14 @@ function savePost(){
 			}
 		}
 	);
+}
+
+function cancelPost(){
+	if(confirm("Are you sure you want to go back? Your changes won't be saved!")){
+		document.location.href = "<?=$CMS->SITE['URL'];?>admin/blogs/";
+	} else {
+		return false;
+	}
 }
 </script>
 
