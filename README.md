@@ -11,7 +11,7 @@ Documentation / Install directions will come soon after I finish a good working 
 - ~~Better default styles for homepage~~
 - .htaccess code for SEO-friendly page links
 - Ability to add pages to site w/ content
-- Blog drafts preview and "Publish / Draft" options in editor
+- ~~Blog drafts preview and "Publish / Draft" options in editor~~
 - Image uploading / cropping, other media in the future (videos, mp3, etc.)
 - Template options
 - Ability to grab fonts from google webfonts
