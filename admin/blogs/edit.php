@@ -59,6 +59,12 @@ function savePost(){
 			var response = JSON.parse(data.response);
 			if(response.type == 'new'){
 				document.location.href = "<?=$CMS->SITE['URL'];?>admin/blogs/edit.php?id="+response.id;
+			}else{
+				if(response.success){
+					message(response.message,'good');
+				}else{
+					message(response.message,'bad');
+				}
 			}
 		}
 	);
