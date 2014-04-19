@@ -18,6 +18,6 @@ Documentation / Install directions will come soon after I finish a good working 
 - Ability to change meta & header info
 - Titles on links in the admin panel
 - ~~Process markdown with PHP so it displays right on the front-end~~
-- Error / Success fancy message
+- ~~Error / Success fancy message~~
 - Fix admin header text-alignment
 - More reminders in this to-do list
