@@ -14,7 +14,25 @@ echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php"); ?>
 	<textarea id="markdown" oninput="this.editor.update()"><?=(isset($blogPost))?$blogPost->content:'';?></textarea>
 	<div id="preview"></div>
 	<div class="clear"></div>
-	<button onclick="savePost(<?=$id;?>)">Save</button>
+	<div style="margin-top:10px">
+		<?php if(isset($blogPost)){
+			if($blogPost->published == 1){
+				$pub = true;
+			}else{
+				$pub = false;
+			}
+		}else{
+			$pub = false;
+		} ?>
+		<div class="slide-lock <?php if($pub){?>locked<?php } else { ?>unlocked<?php } ?>">
+			<span class="slide-left">Draft</span>
+			<span class="slide-right">Published</span>
+			<div class="clear"></div>
+			<div class="slide-lock-button"></div>
+		</div>
+		<button onclick="savePost(<?=$id;?>)" class="left">Save</button>
+		<div class="clear"></div>
+	</div>
 </div>
 
 <script type="text/javascript">

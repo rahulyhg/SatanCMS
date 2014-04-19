@@ -36,8 +36,59 @@ textarea {
 	border: 1px solid rgba(0,0,0,0.2);
 }
 
+button {
+	display: block;
+	padding: 5px 10px;
+	margin: 0;
+}
+
 ul li {
 	list-style: disc inside;
+}
+
+.slide-lock {
+	position: relative;
+	width: 175px;
+	height: 35px;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 0 15px;
+	box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+.slide-lock .slide-left,
+.slide-lock .slide-right {
+	line-height: 35px;
+	font-family: "Helvetica", serif;
+}
+.slide-lock .slide-left {
+	float: left;
+}
+.slide-lock .slide-right {
+	float: right;
+}
+.slide-lock-button {
+	position: absolute;
+	top: 3px;
+	bottom: 3px;
+	width: 100px;
+	z-index: 10;
+	background-color: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.slide-lock.locked .slide-lock-button {
+	left: 3px;
+}
+.slide-lock.unlocked .slide-lock-button {
+	right: 3px;
+}
+.slide-lock:hover .slide-lock-button {
+	background-color: #DDD;
 }
 
 #header {

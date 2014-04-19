@@ -7,7 +7,7 @@ Documentation / Install directions will come soon after I finish a good working 
 ### To Do
 
 - Add password protection to admin panel <sup>important</sup>
-- "Create Post" button in admin panel
+- ~~"Create Post" button in admin panel~~
 - ~~Better default styles for homepage~~
 - .htaccess code for SEO-friendly page links
 - Ability to add pages to site w/ content
