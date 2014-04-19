@@ -15,21 +15,23 @@ echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php"); ?>
 	<div id="preview"></div>
 	<div class="clear"></div>
 	<div style="margin-top:10px">
-		<?php if(isset($blogPost)){
-			if($blogPost->published == 1){
-				$pub = true;
+		<?php if($id){
+			if(isset($blogPost)){
+				if($blogPost->published == 1){
+					$pub = true;
+				}else{
+					$pub = false;
+				}
 			}else{
 				$pub = false;
-			}
-		}else{
-			$pub = false;
-		} ?>
-		<div class="slide-lock <?php if($pub){?>locked<?php } else { ?>unlocked<?php } ?>">
-			<span class="slide-left">Draft</span>
-			<span class="slide-right">Published</span>
-			<div class="clear"></div>
-			<div class="slide-lock-button"></div>
-		</div>
+			} ?>
+			<div class="left slide-lock <?php if($pub){?>locked<?php } else { ?>unlocked<?php } ?>" id="slide-lock" onclick="changePub();" style="margin-right:10px">
+				<span class="slide-left">Draft</span>
+				<span class="slide-right">Published</span>
+				<div class="clear"></div>
+				<div class="slide-lock-button"></div>
+			</div>
+		<?php } ?>
 		<button onclick="savePost(<?=$id;?>)" class="left">Save</button>
 		<div class="clear"></div>
 	</div>
@@ -68,6 +70,24 @@ function cancelPost(){
 	} else {
 		return false;
 	}
+}
+
+function changePub(){
+	var id = <?=$id;?>;
+	ajax('POST',"<?=$CMS->SITE['URL'];?>admin/blogs/change-publish-setting.php",
+		{'id': id},
+		function(data){
+			var response = JSON.parse(data.response);
+			var slide = document.getElementById('slide-lock');
+			if(response.success){
+				if(response.pub){
+					slide.className = 'slide-lock locked';
+				}else{
+					slide.className = 'slide-lock unlocked';
+				}
+			}
+		}
+	);
 }
 </script>
 
