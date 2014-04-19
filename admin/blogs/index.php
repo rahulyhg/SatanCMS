@@ -13,6 +13,7 @@ function deletePost(id){
 			var response = JSON.parse(data.response);
 			if(response.success == true){
 				document.getElementById('blog-post-'+id).remove();
+				message('Post deleted!','good');
 			}else{
 				return false;
 			}
