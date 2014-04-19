@@ -19,8 +19,10 @@ if($id){ // update
 
 if(!$mysqli->errno){
 	$response['message'] = "Saved!";
+	$response['success'] = 1;
 }else{
 	$response['message'] = "There was a problem saving your post...";
+	$response['success'] = 0;
 }
 
 $response['id'] = $id;
