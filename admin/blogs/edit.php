@@ -85,6 +85,9 @@ function changePub(){
 				}else{
 					slide.className = 'left slide-lock unlocked';
 				}
+				message(response.message,'good');
+			}else{
+				message(response.message,'bad');
 			}
 		}
 	);
