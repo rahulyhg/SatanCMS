@@ -173,6 +173,9 @@ ul li {
 	right: 28px;
 	font-size: 28px;
 }
+.header-right .fa-arrow-circle-left {
+	color: #F00;
+}
 
 /* Blogs */
 .blog-post {
