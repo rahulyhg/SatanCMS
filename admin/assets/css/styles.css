@@ -46,6 +46,25 @@ ul li {
 	list-style: disc inside;
 }
 
+
+.alert-popup {
+	text-align: center;
+	margin: 10px 0;
+	padding: 5px;
+	border-radius: 5px;
+	font-family: "Helvetica", serif;
+}
+.alert-popup.good {
+	color: #FFF;
+	background-color: #47a447;
+	border: 1px solid #398439;
+}
+.alert-popup.bad {
+	color: #FFF;
+	background-color: #d9534f;
+	border: 1px solid #d43f3a;
+}
+
 .slide-lock {
 	position: relative;
 	width: 175px;
