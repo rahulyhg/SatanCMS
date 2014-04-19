@@ -31,6 +31,15 @@ function ajax(type, url, variables, callback){
     xhr.send(string_vars);
 }
 
-function message(arg){ // this will be a sexy message at the top of the screen
+function message(arg){
     var body = document.getElementById('body');
+    var messageDiv = document.createElement('div');
+    var content = document.createTextNode(arg);
+    messageDiv.className = 'alert-popup';
+    messageDiv.appendChild(content);
+    if(body.insertBefore(messageDiv,body.firstChild)){
+        return true;
+    }else{
+        return false;
+    }
 }
