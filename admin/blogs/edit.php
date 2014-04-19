@@ -81,9 +81,9 @@ function changePub(){
 			var slide = document.getElementById('slide-lock');
 			if(response.success){
 				if(response.pub){
-					slide.className = 'slide-lock locked';
+					slide.className = 'left slide-lock locked';
 				}else{
-					slide.className = 'slide-lock unlocked';
+					slide.className = 'left slide-lock unlocked';
 				}
 			}
 		}
