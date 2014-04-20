@@ -24,6 +24,13 @@ h6 {
 	font-size: 8px;
 }
 
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+
 #header,
 #footer {
 	text-align: center;

@@ -28,6 +28,12 @@ h6 {
 	font-size: 8px;
 }
 
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
 
 input[type="text"],
 textarea {
