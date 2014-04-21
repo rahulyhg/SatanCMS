@@ -53,6 +53,18 @@ abstract class Base {
 		return $contents;
 	}
 
+	function parseString($contents){
+		preg_match_all("/(?<={{)[^}}]*(?=}})/m",$contents,$curls);
+		if(!empty($curls)){
+			$contents = $this->replaceCurly($contents,$curls);
+		}
+		preg_match_all("/(?=\[\[)[^\]\]]*(?=\]\])/m",$contents,$squares);
+		if(!empty($squares)){
+			$contents = $this->replaceSquares($contents,$squares);
+		}
+		return $contents;
+	}
+
 	function __destruct(){
 		return true;
 	}
