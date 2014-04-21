@@ -24,8 +24,12 @@ abstract class Base {
 			if(!$results) {
 			    throw new Exception("Database Error [{$mysqli->errno}] {$mysqli->error}");
 			}
-			while($row = $results->fetch_assoc()){
+			$i = 0;
+			while($row = $results->fetch_assoc()){ ++$i;
 				$contents = str_replace("{{".$match."}}",$row["conf_value"],$contents);
+			}
+			if($i == 0){
+				$contents = str_replace('{{'.$match.'}}','',$contents);
 			}
 		}
 		return $contents;
