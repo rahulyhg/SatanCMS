@@ -21,4 +21,5 @@ Documentation / Install directions will come soon after I finish a good working 
 - ~~Error / Success fancy message~~
 - Fix admin header text-alignment
 - Textarea autosize
+- Ability to alter .htaccess and robots.txt
 - More reminders in this to-do list
