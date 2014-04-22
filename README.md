@@ -15,7 +15,7 @@ Documentation / Install directions will come soon after I finish a good working 
 - Image uploading / cropping, other media in the future (videos, mp3, etc.)
 - Template options
 - Ability to grab fonts from google webfonts
-- Ability to change meta & header info
+- ~~Ability to change meta & header info~~
 - Titles on links in the admin panel
 - ~~Process markdown with PHP so it displays right on the front-end~~
 - ~~Error / Success fancy message~~
