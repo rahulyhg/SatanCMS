@@ -40,6 +40,7 @@ textarea {
 	padding: 5px 10px;
 	font-size: 18px;
 	border: 1px solid rgba(0,0,0,0.2);
+	box-sizing: border-box;
 }
 
 button {
@@ -240,4 +241,13 @@ ul li {
 	float: right;
 	border: 1px solid rgba(0,0,0,0.2);
 	padding: 5px 10px;
+}
+
+#settings input[type="text"],
+#settings textarea {
+	width: 100%;
+	margin-bottom: 10px;
+}
+#settings textarea {
+	height: 75px;
 }
