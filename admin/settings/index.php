@@ -15,16 +15,16 @@ echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php");?>
 <!-- Scripts -->
 <script type="text/javascript">
 function saveSettings(){
-	var title = document.getElementById('title'),
-		description = document.getElementById('meta-description'),
-		keywords = document.getElementById('meta-keywords');
+	var title = document.getElementById('title').value,
+		description = document.getElementById('meta-description').value,
+		keywords = document.getElementById('meta-keywords').value;
 	ajax('POST',"<?=$CMS->SITE['URL'];?>admin/settings/save.php",
 		{'title': title,
 		'meta-description': description,
 		'meta-keywords': keywords},
 		function(data){
-			var response = JSON.parse(data.reponse);
-			console.log(response);
+			var response = JSON.parse(data.response);
+			message(response.message,'good');
 		}
 	);
 }
