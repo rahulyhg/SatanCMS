@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.32, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: cms
 -- ------------------------------------------------------
--- Server version	5.5.32
+-- Server version	5.5.35-0ubuntu0.12.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -38,7 +38,7 @@ CREATE TABLE `blog_posts` (
 
 LOCK TABLES `blog_posts` WRITE;
 /*!40000 ALTER TABLE `blog_posts` DISABLE KEYS */;
-INSERT INTO `blog_posts` VALUES (5,'First blog post','##test\n- test\n- test again',1,1397843663),(6,'second blog post','*test*',1,1397843694),(7,'third post','testing refresh',1,1397843752);
+INSERT INTO `blog_posts` VALUES (5,'First blog post','##test\n- test\n- test again',0,1397843663),(7,'third post','## testing',0,1397843752);
 /*!40000 ALTER TABLE `blog_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,8 +54,9 @@ CREATE TABLE `config` (
   `conf_key` varchar(32) DEFAULT NULL,
   `conf_value` text,
   `conf_datestamp` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `conf_key_unique` (`conf_key`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +65,7 @@ CREATE TABLE `config` (
 
 LOCK TABLES `config` WRITE;
 /*!40000 ALTER TABLE `config` DISABLE KEYS */;
-INSERT INTO `config` VALUES (2,'title','my title',1397760248),(3,'heading','my heading',1397760548),(4,'sub-heading','my sub-heading',1397762836),(5,'footer','my footer',1397763086);
+INSERT INTO `config` VALUES (18,'title','My Title',1398143505),(19,'meta-description','Another test',1398143505),(20,'meta-keywords','my, keywords, test',1398143505);
 /*!40000 ALTER TABLE `config` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -77,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-18 13:57:02
+-- Dump completed on 2014-04-22  1:12:19
