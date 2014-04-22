@@ -1,7 +1,7 @@
 <?php include '../../lib/framework.php';
 echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php"); ?>
 <a href="<?=$CMS->SITE['URL'];?>admin/blogs/edit.php" title="New Post" class="header-right"><i class="fa fa-pencil-square-o"></i></a>
-<?php foreach($CMS->posts('ids') as $id){
+<?php foreach($CMS->posts('ids',false) as $id){
 	$blogPost = new BlogPost($id);
 	include "{$CMS->SITE['DIR']}admin/inc/blog-post.php";
 }?>

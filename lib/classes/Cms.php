@@ -9,9 +9,13 @@ class Cms extends Base {
 		return $this->parse("{$this->SITE['DIR']}inc/footer.php");
 	}
 
-	function posts($return = 'include'){
+	function posts($return = 'include', $published = true){
 		global $mysqli;
-		$result = $mysqli->query("SELECT id FROM blog_posts WHERE published = 1 ORDER BY id DESC");
+		$qry = "SELECT id FROM blogs_posts WHERE 1 ";
+		if($published){
+			$qry .= " AND published = 1 ";
+		}
+		$result = $mysqli->query("{$qry} ORDER BY id DESC");
 		if($return == 'include'){
 			ob_start();
 			while($row = $result->fetch_assoc()){
