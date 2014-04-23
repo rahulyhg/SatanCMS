@@ -4,15 +4,16 @@
 $id = intval($_POST['id']);
 $title = $mysqli->escape_string($_POST['title']);
 $content = $mysqli->escape_string($_POST['content']);
+$tags = $mysqli->escape_string($_POST['tags']);
 $time = time();
 $response = array();
 
 // save
 if($id){ // update
-	$mysqli->query("UPDATE blog_posts SET title = '{$title}', content = '{$content}' WHERE id = {$id}");
+	$mysqli->query("UPDATE blog_posts SET title = '{$title}', content = '{$content}', tags = '{$tags}' WHERE id = {$id}");
 	$response['type'] = 'update';
 }else{ // insert
-	$mysqli->query("INSERT INTO blog_posts (`title`,`content`,`published`,`datestamp`) VALUES ('{$title}','{$content}',0,{$time})");
+	$mysqli->query("INSERT INTO blog_posts (`title`,`content`,`tags`,`published`,`datestamp`) VALUES ('{$title}','{$content}','{$tags}',0,{$time})");
 	$response['type'] = 'new';
 	$id = $mysqli->insert_id;
 }
