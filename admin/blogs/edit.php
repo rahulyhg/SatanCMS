@@ -15,8 +15,11 @@ echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php"); ?>
 	<textarea id="markdown" oninput="this.editor.update()"><?=(isset($blogPost))?$blogPost->content:'';?></textarea>
 	<div id="preview"></div>
 	<div class="clear"></div>
+	
+	<input type="text" id="tags" oninput="checkLength(this.value);" placeholder="Tags (separate with commas)" style="margin-top:10px" maxlength="128" />
+	<div class="clear"></div>
 
-	<input type="text" id="tags" placeholder="Tags (separate with commas)" style="margin-top:10px" />
+	<div id="chars-left"><span></span> characters left</div>
 	<div class="clear"></div>
 
 	<div>
@@ -52,14 +55,22 @@ function Editor(input,preview){
 }
 new Editor(document.getElementById("markdown"),document.getElementById("preview"));
 
+function checkLength(arg){
+	var count = (arg == undefined) ? document.getElementById('tags').value.length : arg.length;
+	document.querySelector('#chars-left span').innerHTML = 128 - count;
+}
+checkLength();
+
 function savePost(){
-	var id = <?=$id;?>;
-	var title = document.getElementById('title').value;
-	var content = document.getElementById('markdown').value;
+	var id = <?=$id;?>,
+		title = document.getElementById('title').value,
+		content = document.getElementById('markdown').value,
+		tags = document.getElementById('tags');
 	ajax('POST',"<?=$CMS->SITE['URL'];?>admin/blogs/save.php",
 		{'id': id,
 		'title': title,
-		'content': content},
+		'content': content,
+		'tags': tags},
 		function(data){
 			var response = JSON.parse(data.response);
 			if(response.type == 'new'){

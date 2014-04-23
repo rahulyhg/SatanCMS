@@ -242,6 +242,9 @@ ul li {
 	border: 1px solid rgba(0,0,0,0.2);
 	padding: 5px 10px;
 }
+#edit-blog-post #chars-left {
+	margin-bottom: 10px;
+}
 
 #settings input[type="text"],
 #settings textarea {
