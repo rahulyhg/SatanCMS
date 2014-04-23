@@ -26,10 +26,11 @@ CREATE TABLE `blog_posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text,
   `content` text,
+  `tags` varchar(128) DEFAULT NULL,
   `published` tinyint(1) DEFAULT NULL,
   `datestamp` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +39,7 @@ CREATE TABLE `blog_posts` (
 
 LOCK TABLES `blog_posts` WRITE;
 /*!40000 ALTER TABLE `blog_posts` DISABLE KEYS */;
-INSERT INTO `blog_posts` VALUES (5,'First blog post','##test\n- test\n- test again',0,1397843663),(7,'third post','## testing',0,1397843752);
+INSERT INTO `blog_posts` VALUES (1,'test','test',NULL,1,1398145159),(2,'New post!','this is a new post!',NULL,0,1398213827);
 /*!40000 ALTER TABLE `blog_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,7 +57,7 @@ CREATE TABLE `config` (
   `conf_datestamp` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `conf_key_unique` (`conf_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +66,7 @@ CREATE TABLE `config` (
 
 LOCK TABLES `config` WRITE;
 /*!40000 ALTER TABLE `config` DISABLE KEYS */;
-INSERT INTO `config` VALUES (18,'title','My Title',1398143505),(19,'meta-description','Another test',1398143505),(20,'meta-keywords','my, keywords, test',1398143505);
+INSERT INTO `config` VALUES (18,'title','My Title',1398144260),(19,'meta-description','Another test',1398144260),(20,'meta-keywords','my, keywords, test',1398144260),(27,'heading','My Header',1398144260),(28,'sub-heading','My Sub-heading',1398144260),(29,'footer','Chris McCullough made this',1398144260);
 /*!40000 ALTER TABLE `config` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -78,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-22  1:12:19
+-- Dump completed on 2014-04-22 22:34:53

@@ -11,10 +11,15 @@ echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php"); ?>
 <div id="edit-blog-post">
 	<input type="text" id="title" placeholder="Title" value="<?=(isset($blogPost))?$blogPost->title:'';?>" />
 	<div class="clear"></div>
+
 	<textarea id="markdown" oninput="this.editor.update()"><?=(isset($blogPost))?$blogPost->content:'';?></textarea>
 	<div id="preview"></div>
 	<div class="clear"></div>
-	<div style="margin-top:10px">
+
+	<input type="text" id="tags" placeholder="Tags (separate with commas)" style="margin-top:10px" />
+	<div class="clear"></div>
+
+	<div>
 		<?php if($id){
 			if(isset($blogPost)){
 				if($blogPost->published == 1){
