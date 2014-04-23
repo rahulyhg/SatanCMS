@@ -65,7 +65,7 @@ function savePost(){
 	var id = <?=$id;?>,
 		title = document.getElementById('title').value,
 		content = document.getElementById('markdown').value,
-		tags = document.getElementById('tags');
+		tags = document.getElementById('tags').value;
 	ajax('POST',"<?=$CMS->SITE['URL'];?>admin/blogs/save.php",
 		{'id': id,
 		'title': title,
