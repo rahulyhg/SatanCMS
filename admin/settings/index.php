@@ -12,13 +12,13 @@ echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php");?>
 	<input type="text" id="meta-keywords" placeholder="Meta Keywords" value="<?=$CMS->parseString('{{meta-keywords}}');?>" />
 	<div class="clear"></div>
 
-	<input type="text" id="heading" placeholder="Heading" />
+	<input type="text" id="heading" placeholder="Heading" value="<?=$CMS->parseString('{{heading}}');?>" />
 	<div class="clear"></div>
 
-	<input type="text" id="sub-heading" placeholder="Sub-heading" />
+	<input type="text" id="sub-heading" placeholder="Sub-heading" value="<?=$CMS->parseString('{{sub-heading}}');?>" />
 	<div class="clear"></div>
 
-	<input type="text" id="footer" placeholder="Footer" />
+	<input type="text" id="footer" placeholder="Footer" value="<?=$CMS->parseString('{{footer}}');?>" />
 	<div class="clear"></div>
 
 	<button onclick="saveSettings();">Save</button>
