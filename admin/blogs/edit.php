@@ -16,7 +16,7 @@ echo $CMS->parse("{$CMS->SITE['DIR']}admin/inc/header.php"); ?>
 	<div id="preview"></div>
 	<div class="clear"></div>
 	
-	<input type="text" id="tags" oninput="checkLength(this.value);" placeholder="Tags (separate with commas)" style="margin-top:10px" maxlength="128" />
+	<input type="text" id="tags" oninput="checkLength(this.value);" placeholder="Tags (separate with commas)" style="margin-top:10px" maxlength="128" value="<?=(isset($blogPost))?$blogPost->tags:'';?>" />
 	<div class="clear"></div>
 
 	<div id="chars-left"><span></span> characters left</div>
