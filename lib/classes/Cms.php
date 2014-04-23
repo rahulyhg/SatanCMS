@@ -11,7 +11,7 @@ class Cms extends Base {
 
 	function posts($return = 'include', $published = true){
 		global $mysqli;
-		$qry = "SELECT id FROM blogs_posts WHERE 1 ";
+		$qry = "SELECT id FROM blog_posts WHERE 1 ";
 		if($published){
 			$qry .= " AND published = 1 ";
 		}
