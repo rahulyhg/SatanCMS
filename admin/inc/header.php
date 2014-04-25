@@ -28,6 +28,7 @@
 			<ul>
 				<li><a href="[[URL]]admin/">Dashboard<i class="fa fa-check"<?php if($_SERVER['SCRIPT_NAME'] == "/admin/index.php"){?> style="display:inline-block"<?php } ?>></i></a></li>
 				<li><a href="[[URL]]admin/blogs/">Blogs<i class="fa fa-check"<?php if(strpos($_SERVER['SCRIPT_NAME'],"blogs") > -1){?> style="display:inline-block"<?php } ?>></i></a></li>
+				<li><a href="[[URL]]admin/media/">Media<i class="fa fa-check"<?php if(strpos($_SERVER['SCRIPT_NAME'],"media") > -1){?> style="display:inline-block"<?php } ?>></i></a></li>
 				<li><a href="[[URL]]admin/settings/">Settings<i class="fa fa-check"<?php if(strpos($_SERVER['SCRIPT_NAME'],"settings") > -1){?> style="display:inline-block"<?php } ?>></i></a></li>
 			</ul>
 		</div>
