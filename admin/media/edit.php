@@ -25,5 +25,16 @@ if(isset($_GET['id'])){
 	<div class="clear"></div>
 </div>
 
+<script type="text/javascript">
+function saveMedia(){
+	
+}
+function filer(){
+	if(window.File && window.FileReader && window.FileList && window.Blob){
+		var files = evt.target.files;
+	}
+}
+
+</script>
 
 <?=$CMS->parse("{$CMS->SITE['DIR']}admin/inc/footer.php"); ?>
