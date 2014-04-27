@@ -221,7 +221,12 @@ ul li {
 }
 
 /* Blog edit */
-#edit-blog-post input[type="text"] {
+#edit-blog-post h2,
+#edit-media h2 {
+	text-align: center;
+}
+#edit-blog-post input[type="text"],
+#edit-media input[type="text"] {
 	width: 100%;
 	box-sizing: border-box;
 	margin-bottom: 10px;
@@ -243,6 +248,10 @@ ul li {
 	padding: 5px 10px;
 }
 #edit-blog-post #chars-left {
+	margin-bottom: 10px;
+}
+
+#edit-media h2 {
 	margin-bottom: 10px;
 }
 
