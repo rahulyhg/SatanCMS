@@ -19,6 +19,10 @@ if(isset($_GET['id'])){
 
 	<textarea id="description" placeholder="Description"></textarea>
 	<div class="clear"></div>
+
+	<input type="file" id="file" class="left" />
+	<button onclick="saveMedia()" class="right">Save</button>
+	<div class="clear"></div>
 </div>
 
 
