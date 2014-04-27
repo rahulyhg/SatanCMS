@@ -256,7 +256,8 @@ ul li {
 }
 
 #settings input[type="text"],
-#settings textarea {
+#settings textarea,
+#edit-media textarea {
 	width: 100%;
 	margin-bottom: 10px;
 }

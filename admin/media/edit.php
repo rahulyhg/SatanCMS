@@ -14,7 +14,11 @@ if(isset($_GET['id'])){
 		<h2>Upload Media</h2>
 	<?php } ?>
 	
-	<input type="text" placeholder="Title" />
+	<input type="text" id="title" placeholder="Title" />
+	<div class="clear"></div>
+
+	<textarea id="description" placeholder="Description"></textarea>
+	<div class="clear"></div>
 </div>
 
 
