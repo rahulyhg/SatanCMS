@@ -19,7 +19,7 @@ Documentation / Install directions will come soon after I finish a good working 
 - Titles on links in the admin panel
 - ~~Process markdown with PHP so it displays right on the front-end~~
 - ~~Error / Success fancy message~~
-- Fix admin header text-alignment
+- ~~Fix admin header text-alignment~~
 - Textarea autosize
 - Ability to alter .htaccess and robots.txt
 - More reminders in this to-do list

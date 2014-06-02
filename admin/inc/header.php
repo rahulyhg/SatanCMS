@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<div id="header">
-			<a href="javascript:void(0);" onclick="nav();"><i class="fa fa-bars left" style="margin:0 0 0 20px"></i></a>
+			<a href="javascript:void(0);" onclick="nav();" id="nav-button"><i class="fa fa-bars" style="margin:0 0 0 20px"></i></a>
 			<h1>Admin</h1>
 		</div>
 		<div id="navigation" class="closed">
