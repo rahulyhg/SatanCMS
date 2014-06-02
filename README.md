@@ -1,6 +1,6 @@
 #SatanCMS
 
-A blogging CMS I'm making because I dislike Wordpress and love satan. Markdown is the text editor.
+A blogging CMS I'm making because I dislike Wordpress and love satan. Markdown is the text editor. This CMS will implement a lot of the features Wordpress has, but it will be a lot easier for developers to make their own add-ons.
 
 Documentation / Install directions will come soon after I finish a good working copy of SatanCMS.
 
